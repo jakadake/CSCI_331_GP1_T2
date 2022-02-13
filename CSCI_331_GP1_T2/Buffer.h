@@ -1,7 +1,6 @@
 /**
-
-
-
+* BUFFER.H
+* Class for reading in values from a specified file to a buffer.   
 */
 
 #ifndef BUFFER_h
@@ -18,27 +17,22 @@ public:
 
 	/**
 	@brief Constructor for the buffer class
-	@param inFile is the address of the givefilen 
-	@pre 
+	@pre Takes in the address to the us_postal_codes.csv file  
 	@post inFile, index and buf are all initialized
 	*/
 	buffer(ifstream& inFile);
 
 	/**
 	@brief reads from csv file and places on string
-	@pre
-	@post
+	@post returns the string of one line of us_postal_codes.csv 
 	*/
 	string read();
 
 
-private:
 
 	ifstream* iFile;
 	int index;
 	string buf;
 
 };
-
-
 #endif

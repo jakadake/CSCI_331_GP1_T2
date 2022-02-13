@@ -23,12 +23,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="buffer.h" />
-    <ClInclude Include="state.h" />
+    <ClInclude Include="zip.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="buffer.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="state.cpp" />
+    <ClCompile Include="zip.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
