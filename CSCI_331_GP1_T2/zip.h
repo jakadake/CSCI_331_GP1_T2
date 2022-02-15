@@ -31,6 +31,10 @@ public:
 	*/
 	zip(int newNum, string newCity, string newStateCode, string newCounty, float newLat, float newLon);
 
+	/**
+	@brief copy constructor
+	*/
+	zip(zip* oldZip);
 
 	/**
 	@brief Inline setters and getters
