@@ -4,7 +4,7 @@
 */
 
 #include <iostream>
-#include <string.h>
+#include <string>
 #include <new>
 #include "zip.h"
 

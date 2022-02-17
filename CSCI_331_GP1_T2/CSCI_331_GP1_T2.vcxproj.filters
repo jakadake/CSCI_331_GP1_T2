@@ -18,6 +18,9 @@
     <None Include="us_postal_codes.csv">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="postal_test.csv">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="buffer.h">
