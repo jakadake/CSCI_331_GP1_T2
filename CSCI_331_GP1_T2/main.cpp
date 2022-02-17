@@ -1,6 +1,7 @@
 /**
 Main program 
-@brief reads zip codes in from a csv file, then prints a table organized by state
+@brief reads zip codes in from a csv file, then prints a table organized by state with most east, west, north, and south zips
+@author Jake Haapoja, Ken Stearns, Nathan O'Connor, Zach Sawicki
 */
 
 #include "buffer.h"
@@ -29,16 +30,22 @@ void cleanup(vector<zip>* states[]); // deallocates memory reserved during runti
 
 
 int main() {
+	//cout << "ifstream" << endl;
 	ifstream inFile; // filestream object
+	inFile.open("postal_test.csv"); // access the data file and associate to filestream object
+	//cout << "setting up arrays" << endl;
 	vector<zip> *states[numStates]; // array of state vectors
+	//cout << "for loop initialize array" << endl;
 	for (int i = 0; i < numStates; i++) {
 		states[i] = new vector<zip>; // initialize the array
 	}
+	//cout << "readIn " << endl;
 	readIn(inFile, states); // read and parse data
+	//cout << "printTable" << endl;
 	printTable(*states); // pass the array of state vectors for output
 
 	cleanup(states); // deallocate all reserved memory
-
+	inFile.close();
 	return 1;
 }
 
@@ -50,66 +57,68 @@ int main() {
 @post zip code records have been read into zip objects,
 *zip objects have been sorted to their respective state vectors.
 */
-void readIn(ifstream& inFile, vector<zip>* states[]){
+void readIn(ifstream& inFile, vector<zip>* states[]) {
 
-	string line = ""; // record input storage
-	zip temp; // temporary storage for parsed record
+	zip temp = new zip; // temporary storage for parsed record
 	string item; // stores one field at a time before it's added to temp
-	inFile.open("us_postal_codes.csv"); // access the data file and associate to filestream object
+	int headerCount;
 
-	getline(inFile, line);
-	getline(inFile, line);	//Lazy but it works! (clears the junk data at the start of the file)
-	getline(inFile, line);
+	//cout << "buffer" << endl;
+	buffer b; // create buffer object
 
-	buffer b(inFile); // create buffer object
+	//cout << "Gathering number of fields in each record" << endl;
+	headerCount = b.headerCount(inFile);	// number of fields in each record
+	//cout << "Number of fields per record: " << headerCount << endl;
 
-	while(!inFile.eof()) { // loop until end of file
-
-		line = b.read(); // pull next line
-
-		int marker1 = 0, // what do these do??
-			marker2 = 0, 
-			tag = 0;
-
-		for(int i = 0; i < line.size(); i++) {
-
-			if(line[i] == ',') {
-
-				while (marker2 < i){
-					item[marker1++] = line[marker2++]; // how does this work??
-				}
-
-				marker1 = 0;
-				switch(tag) {
-					case 0: temp.setNum(stoi(item));	//If it is a zip code
-					case 1: temp.setCity(item);			//If it is a city
-					case 2: temp.setStateCode(item);	//If it is a state code
-					case 3: temp.setCounty(item);		//if it is a county
-					case 4: temp.setLat(stof(item));	//If it is a latitude
-					case 5: temp.setLon(stof(item));	//If it is a longitude
-				}
-				tag++;
+	//cout << "starting loop" << endl;
+	int tag = 0;
+	while (b.read(inFile)) { // loop until end of file
+		while (b.unpack(item)) {
+			//cout << "Success" << endl;
+			switch (tag) {
+			case 0: temp.setNum(stoi(item));	//If it is a zip code
+				break;
+			case 1: temp.setCity(item);			//If it is a city
+				break;
+			case 2: temp.setStateCode(item);	//If it is a state code
+				break;
+			case 3: temp.setCounty(item);		//if it is a county
+				break;
+			case 4: temp.setLat(stof(item));	//If it is a latitude
+				break;
+			default: temp.setLon(stof(item));	//If it is a longitude
+				tag = -1; break;
 			}
+			++tag;
 		}
+		//cout << "push_back to correct states vector" << endl;
 		states[stateChooser(temp.getStateCode())] -> push_back(new zip(temp));
 		// new zip object with same values as temp is added to the end of the corresponding state vector
 	}
-	inFile.close();
+
+	//cout << "end of loop" << endl;
+	delete &temp;
 }
+
+
+
 
 
 /**
 @brief Prints the state arrays zip code state code  
-@pre Recieves the array of state objects 
+@pre Receives the array of state objects 
+@post prints a table of the most north, south, east,
+* and west zip codes of each state
 */
 void printTable(vector<zip> states[]) {
 	cout << "*************************" << endl;
 	for (int i = 0; i < numStates; i++) {
-		cout << states[i][0].getStateCode() << endl;
-		cout << "Most East: " << states[i][mostEast(states[i])].getNum() 
-			<< " Most West: " << states[i][mostWest(states[i])].getNum() // MoWestuth
-			<< " Most North: " << states[i][mostNorth(states[i])].getNum() 
-			<< " Most South: " << states[i][mostSouth(states[i])].getNum() << endl; // MosSouthst
+		cout << "State	East	West	North	South"<< endl;
+		cout << states[i][0].getStateCode();
+		cout << " Most East: " << states[i][mostEast(states[i])].getNum() 
+			 << " Most West: " << states[i][mostWest(states[i])].getNum() // MoWestuth
+			 << " Most North: " << states[i][mostNorth(states[i])].getNum() 
+			 << " Most South: " << states[i][mostSouth(states[i])].getNum() << endl; // MosSouthst
 	}
 	cout << "*************************" << endl;
 }
@@ -145,7 +154,7 @@ short mostSouth(vector<zip> state) {
 }
 
 /**
- * @brief Finds the most esta zipcode of a given state
+ * @brief Finds the most "esta" zipcode of a given state
  * @pre Takes an element of the state array.  
  * @post returns the index of the most east zipcode.
  */
@@ -180,7 +189,7 @@ short mostWest(vector<zip> state) {
 
 void cleanup(vector<zip>* states[]) {
 
-	for (int i = numStates - 1; i >= 0; i++) {
+	for (int i = numStates - 1; i >= 0; i--) {
 		for (int j = states[i] -> size() - 1; j >= 0; j--) {
 
 			delete &states[i][j];

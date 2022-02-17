@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include <string>
 using namespace std;
 
@@ -20,17 +21,41 @@ public:
 	@pre Takes in the address to the us_postal_codes.csv file  
 	@post inFile, index and buf are all initialized
 	*/
-	buffer(ifstream& inFile);
+	buffer();
+	buffer(char, int);
 
 	/**
 	@brief reads from csv file and places on string
 	@post returns the string of one line of us_postal_codes.csv 
 	*/
-	string read();
+	bool read(ifstream& inFile);
+
+	/**
+	@brief
+	@pre
+	@post
+	*/
+	bool unpack(string & field);
+
+	//int headerLines(ifstream inFile);
+
+	int headerCount(ifstream & inFile);
+
+	/**
+	@brief
+	@pre
+	@post
+	*/
+	//vector<string> headerData(ifstream & inFile, string& field);
+	string getBuffer() { return buf; };
 
 
 
-	ifstream* iFile;
+
+private:
+	char delim;
+	int size;
+	int maxsize;
 	int index;
 	string buf;
 

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <None Include="postal_test.csv" />
     <None Include="us_postal_codes.csv" />
   </ItemGroup>
   <ItemGroup>
