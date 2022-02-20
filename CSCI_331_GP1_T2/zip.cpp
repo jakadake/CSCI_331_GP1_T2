@@ -41,5 +41,4 @@ zip::zip(zip* oldZip)
 	county = oldZip->getCounty();
 	lat = oldZip->getLat();
 	lon = oldZip->getLon();
-
 }
