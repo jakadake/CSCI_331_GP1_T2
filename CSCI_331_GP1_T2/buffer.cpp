@@ -31,7 +31,7 @@ bool buffer::read(ifstream& inFile){
 	buf = "";
 	if (inFile.is_open() && !inFile.eof()) {	// execute only when the file is open and not at the end of the file
 		getline(inFile,buf);					// pull everything up to the next newline
-		size = buf.length();					// set size to the line length
+		size = buf.size();						// set size to the line length
 		return true;
 	}
 	else
@@ -40,9 +40,9 @@ bool buffer::read(ifstream& inFile){
 }
 
 bool buffer::unpack(string& field){
-	if (size != 0) { // execute only when buffer is not empty
+	if (index != size && size != 0) { // execute only when buffer is not empty
 
-		while (index <= size || buf[index] != delim) { // 
+		while (index < size && buf[index] != delim) { // 
 			field.push_back(buf[index++]);
 		}
 		if (buf[index] == delim)
