@@ -12,7 +12,9 @@
 #include <string>
 using namespace std;
 
-
+/**
+@brief class to store each record and parse each field
+*/
 class buffer {
 public:
 
@@ -31,22 +33,17 @@ public:
 	bool read(ifstream& inFile);
 
 	/**
-	@brief
-	@pre
-	@post
+	@brief Seperates each field from the line on the buffer
+	@pre Buffer must not be empty
+	@post Makes parameter string equal to correct field in record
 	*/
 	bool unpack(string & field);
 
-	//int headerLines(ifstream inFile);
-
-	int headerCount(ifstream & inFile);
 
 	/**
-	@brief
-	@pre
-	@post
+	@brief Gives the buffer string  
+	@post Returns the buffer string  
 	*/
-	//vector<string> headerData(ifstream & inFile, string& field);
 	string getBuffer() { return buf; };
 
 

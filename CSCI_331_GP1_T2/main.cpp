@@ -12,7 +12,7 @@ using namespace std;
 static const short numStates = 57; // number of possible states/regions
 
 
-void printTable(vector<vector<zip>>); // output data table
+string printTable(vector<vector<zip>>); // output data table
 
 void readIn(ifstream& inFile, vector<vector<zip>>&); // read and parse data
 
@@ -30,26 +30,34 @@ void cleanup(vector<vector<zip>>&); // deallocates memory reserved during runtim
 
 
 int main() {
-	//cout << "ifstream" << endl;
 	ifstream inFile; // filestream object
-	inFile.open("us_postal_codes.csv"); // access the data file and associate to filestream object
-	//cout << "setting up arrays" << endl;
+	ofstream outFile;
+	string filename;
 	vector<vector<zip>> states; // array of state vectors
 	states.resize(57); // initialize states vector
-	cout << "readIn " << endl;
-	readIn(inFile, states); // read and parse data -- Broken
-	//cout << "printTable" << endl;
-	//printTable(*states); // pass the array of state vectors for output
+	
+	
+	cout << "Filename: ";
+	cin >> filename;
+	inFile.open(filename); // access the data file and associate to filestream object
+	outFile.open("output.txt");
+	
+	string header, temp;
+	header.append("Data File : ");
+	header.append(filename);
+	header.append("\nColumn Headers In the Data File: \n");
+	for (int i = 0; i < 3; i++) {
+		getline(inFile, temp);
+		header.append(temp);
+	}
+	header.append("\n");
 
-	//cleanup(states); // deallocate all reserved memory
+	readIn(inFile, states);
 
-
-
-	printTable(states); // pass the array of state vectors for output
+	outFile << header << printTable(states); // read data and pass the array of state vectors for output
 	cout << "Hello World" << endl;
 
-
-
+	outFile.close();
 	inFile.close();
 	return 1;
 }
@@ -66,26 +74,14 @@ void readIn(ifstream& inFile, vector<vector<zip>>& states) {
 
 	zip temp; // temporary storage for parsed record
 	string item; // stores one field at a time before it's added to temp
-	int headerCount;
+	string headerData;
 
-	//cout << "buffer" << endl;
 	buffer b; // create buffer object
 
-	//cout << "Gathering number of fields in each record" << endl;
-	//headerCount = b.headerCount(inFile);	// number of fields in each record
-	//cout << "Number of fields per record: " << headerCount << endl;
-
-	//cout << "starting loop" << endl;
-	b.read(inFile);
-	b.read(inFile);		//temporary
-	b.read(inFile);
-
 	int tag = 0;
-	//cout << "Loop about to begin" << endl;
+
 	while (b.read(inFile)) { // loop until end of file
 
-		//cout << "fetched new line" << endl;
-		//cout << b.getBuffer() << endl;
 
 		while (b.unpack(item)) {
 
@@ -108,12 +104,9 @@ void readIn(ifstream& inFile, vector<vector<zip>>& states) {
 			item = ""; //ittemm
 			++tag;
 		}
-		//cout << "push_back to correct states vector" << endl;
 		states[stateChooser(temp.getStateCode())].push_back(zip(temp));
 		// new zip object with same values as temp is added to the end of the corresponding state vector
 	}
-
-	//cout << "end of loop" << endl;
 }
 
 
@@ -126,19 +119,32 @@ void readIn(ifstream& inFile, vector<vector<zip>>& states) {
 @post prints a table of the most north, south, east,
 * and west zip codes of each state
 */
-void printTable(vector<vector<zip>> states) {
-	cout << "*************************************************************************" << endl;
-	cout << "*State\t\tEast\t\tWest\t\tNorth\t\tSouth\t*" << endl;
+string printTable(vector<vector<zip>> states) {
+
+	string output;
+
+	output.append("*****************************************************\n");
+	output.append("*State\t|East\t\t|West\t\t|North\t\t|South\t*\n");
+	output.append("*****************************************************\n");
 
 	for (int i = 0; i < numStates; i++) {
-		cout << '*' << states[i][0].getStateCode() << "\t|\t";
-		cout << states[i][mostEast(states[i])].getNum() << "\t|\t"
-			 << states[i][mostWest(states[i])].getNum() << "\t|\t" // MoWestuth
-			 << states[i][mostNorth(states[i])].getNum() << "\t|\t"
-			 << states[i][mostSouth(states[i])].getNum() << "\t*" << endl; // MosSouthst
+		output.append("*");
+		output.append(states[i][0].getStateCode());
+		output.append("\t\t|");
+		output.append(to_string(states[i][mostEast(states[i])].getNum())); 
+		output.append("\t\t|");
+		output.append(to_string(states[i][mostWest(states[i])].getNum()));					// MoWestuth
+		output.append("\t\t|");
+		output.append(to_string(states[i][mostNorth(states[i])].getNum()));
+		output.append("\t\t|");
+		output.append(to_string(states[i][mostSouth(states[i])].getNum()));					// MosSouthst
+		output.append("\t*\n");																
 	}
-	cout << "*State\t\tEast\t\tWest\t\tNorth\t\tSouth\t*" << endl;
-	cout << "*************************************************************************" << endl;
+	output.append("*****************************************************\n");
+	output.append("*State\t|East\t\t|West\t\t|North\t\t|South\t*\n");
+	output.append("*****************************************************");
+
+	return output;
 }
 
 
@@ -199,20 +205,6 @@ short mostWest(vector<zip> state) {
 	return x;
 }
 
-/**
-@brief cleanup function
-@pre is passed the filled array of state vectors
-@post each zip object and state vector has been deallocated
-*/
-
-void cleanup(vector<vector<zip>> states) {
-
-	for (int i = numStates - 1; i >= 0; i--) {
-		states[i].clear();
-	}
-
-}
-
 
 
 /******************************************STOP SCROLLING FOR YOUR OWN GOOD******************************************/
@@ -224,10 +216,10 @@ void cleanup(vector<vector<zip>> states) {
 // Point of 58 returns;
 
 /**
-@brief Chooses which state array index is correct
-*with the use of a switch statement
-@pre two character state code in a string is used as parameter
-@post Returns the correct array index as an int
+* @brief Chooses which state array index is correct
+* with the use of a switch statement
+* @pre two character state code in a string is used as parameter
+* @post Returns the correct array index as an int
 */
 short stateChooser(string x) {
 

@@ -1,0 +1,178 @@
+\hypertarget{classbuffer}{}\doxysection{buffer Class Reference}
+\label{classbuffer}\index{buffer@{buffer}}
+
+
+class to store each record and parse each field  
+
+
+
+
+{\ttfamily \#include $<$buffer.\+h$>$}
+
+
+
+Collaboration diagram for buffer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classbuffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbuffer_a5e4b67f8834ec79f467a1e11bdebe042}{buffer}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the buffer class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbuffer_aff77a0df72c5ea735a91b320ad564cfa}{buffer}} (char, int)
+\item 
+bool \mbox{\hyperlink{classbuffer_a9268288e8e5634e3ab2ca9f4689bdbca}{read}} (ifstream \&in\+File)
+\begin{DoxyCompactList}\small\item\em reads from csv file and places on string \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbuffer_a352066bf8b1c9a22405fdcb798511e89}{unpack}} (string \&field)
+\begin{DoxyCompactList}\small\item\em Seperates each field from the line on the buffer. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbuffer_aa45dc2ea1f3b5de8ad2ec8e4ca3a96de}{get\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Gives the buffer string ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{classbuffer_a0259545840846783421f222770e94e2f}{delim}}
+\item 
+int \mbox{\hyperlink{classbuffer_af3f397315f9d1257c0b271d6692c9e14}{size}}
+\item 
+int \mbox{\hyperlink{classbuffer_a4bee5080d2abb0490f20bb215dcbe298}{maxsize}}
+\item 
+int \mbox{\hyperlink{classbuffer_a4018f851817a66cb8aaf9fd5761244c3}{index}}
+\item 
+string \mbox{\hyperlink{classbuffer_a95cf6afbc3dc1635890874bea253cf74}{buf}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class to store each record and parse each field 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbuffer_a5e4b67f8834ec79f467a1e11bdebe042}\label{classbuffer_a5e4b67f8834ec79f467a1e11bdebe042}} 
+\index{buffer@{buffer}!buffer@{buffer}}
+\index{buffer@{buffer}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{buffer()}{buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily buffer\+::buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the buffer class. 
+
+\begin{DoxyPrecond}{Precondition}
+Takes in the address to the us\+\_\+postal\+\_\+codes.\+csv file ~\newline
+ 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+in\+File, index and buf are all initialized
+\end{DoxyPostcond}
+\mbox{\hyperlink{buffer_8cpp}{BUFFER.\+CPP}} Member function definitions for the buffer class. ~\newline
+ \mbox{\Hypertarget{classbuffer_aff77a0df72c5ea735a91b320ad564cfa}\label{classbuffer_aff77a0df72c5ea735a91b320ad564cfa}} 
+\index{buffer@{buffer}!buffer@{buffer}}
+\index{buffer@{buffer}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{buffer()}{buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily buffer\+::buffer (\begin{DoxyParamCaption}\item[{char}]{delim = {\ttfamily \textquotesingle{},\textquotesingle{}},  }\item[{int}]{maxsize = {\ttfamily 1000} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbuffer_aa45dc2ea1f3b5de8ad2ec8e4ca3a96de}\label{classbuffer_aa45dc2ea1f3b5de8ad2ec8e4ca3a96de}} 
+\index{buffer@{buffer}!getBuffer@{getBuffer}}
+\index{getBuffer@{getBuffer}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{getBuffer()}{getBuffer()}}
+{\footnotesize\ttfamily string buffer\+::get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gives the buffer string ~\newline
+ 
+
+\begin{DoxyPostcond}{Postcondition}
+Returns the buffer string ~\newline
+ 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classbuffer_a9268288e8e5634e3ab2ca9f4689bdbca}\label{classbuffer_a9268288e8e5634e3ab2ca9f4689bdbca}} 
+\index{buffer@{buffer}!read@{read}}
+\index{read@{read}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool buffer\+::read (\begin{DoxyParamCaption}\item[{ifstream \&}]{in\+File }\end{DoxyParamCaption})}
+
+
+
+reads from csv file and places on string 
+
+\begin{DoxyPostcond}{Postcondition}
+returns the string of one line of us\+\_\+postal\+\_\+codes.\+csv 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classbuffer_a9268288e8e5634e3ab2ca9f4689bdbca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbuffer_a352066bf8b1c9a22405fdcb798511e89}\label{classbuffer_a352066bf8b1c9a22405fdcb798511e89}} 
+\index{buffer@{buffer}!unpack@{unpack}}
+\index{unpack@{unpack}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily bool buffer\+::unpack (\begin{DoxyParamCaption}\item[{string \&}]{field }\end{DoxyParamCaption})}
+
+
+
+Seperates each field from the line on the buffer. 
+
+\begin{DoxyPrecond}{Precondition}
+Buffer must not be empty 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Makes parameter string equal to correct field in record 
+\end{DoxyPostcond}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classbuffer_a352066bf8b1c9a22405fdcb798511e89_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbuffer_a95cf6afbc3dc1635890874bea253cf74}\label{classbuffer_a95cf6afbc3dc1635890874bea253cf74}} 
+\index{buffer@{buffer}!buf@{buf}}
+\index{buf@{buf}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{buf}{buf}}
+{\footnotesize\ttfamily string buffer\+::buf\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbuffer_a0259545840846783421f222770e94e2f}\label{classbuffer_a0259545840846783421f222770e94e2f}} 
+\index{buffer@{buffer}!delim@{delim}}
+\index{delim@{delim}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{delim}{delim}}
+{\footnotesize\ttfamily char buffer\+::delim\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbuffer_a4018f851817a66cb8aaf9fd5761244c3}\label{classbuffer_a4018f851817a66cb8aaf9fd5761244c3}} 
+\index{buffer@{buffer}!index@{index}}
+\index{index@{index}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily int buffer\+::index\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbuffer_a4bee5080d2abb0490f20bb215dcbe298}\label{classbuffer_a4bee5080d2abb0490f20bb215dcbe298}} 
+\index{buffer@{buffer}!maxsize@{maxsize}}
+\index{maxsize@{maxsize}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{maxsize}{maxsize}}
+{\footnotesize\ttfamily int buffer\+::maxsize\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classbuffer_af3f397315f9d1257c0b271d6692c9e14}\label{classbuffer_af3f397315f9d1257c0b271d6692c9e14}} 
+\index{buffer@{buffer}!size@{size}}
+\index{size@{size}!buffer@{buffer}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int buffer\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{buffer_8h}{buffer.\+h}}\item 
+\mbox{\hyperlink{buffer_8cpp}{buffer.\+cpp}}\end{DoxyCompactItemize}

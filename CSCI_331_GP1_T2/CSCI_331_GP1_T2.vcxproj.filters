@@ -18,7 +18,13 @@
     <None Include="us_postal_codes.csv">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="postal_test.csv">
+    <None Include="Run Default Sort.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Run Alt Sort.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="us_postal_codes_by_state.csv">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
@@ -40,5 +46,10 @@
     <ClCompile Include="buffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="output.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

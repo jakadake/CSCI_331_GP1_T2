@@ -19,8 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <None Include="postal_test.csv" />
+    <None Include="Run Alt Sort.bat" />
+    <None Include="Run Default Sort.bat" />
     <None Include="us_postal_codes.csv" />
+    <None Include="us_postal_codes_by_state.csv" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="buffer.h" />
@@ -30,6 +32,9 @@
     <ClCompile Include="buffer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="zip.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="output.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
