@@ -1,0 +1,157 @@
+\begin{theindex}
+
+  \item {buf}
+    \subitem {buffer}, \hyperpage{8}
+  \item {buffer}, \hyperpage{5}
+    \subitem {buf}, \hyperpage{8}
+    \subitem {buffer}, \hyperpage{6}
+    \subitem {delim}, \hyperpage{8}
+    \subitem {getBuffer}, \hyperpage{6}
+    \subitem {index}, \hyperpage{8}
+    \subitem {maxsize}, \hyperpage{8}
+    \subitem {read}, \hyperpage{7}
+    \subitem {size}, \hyperpage{8}
+    \subitem {unpack}, \hyperpage{7}
+  \item {buffer.cpp}, \hyperpage{17}
+  \item {buffer.h}, \hyperpage{17}
+
+  \indexspace
+
+  \item {city}
+    \subitem {zip}, \hyperpage{16}
+  \item {cleanup}
+    \subitem {main.cpp}, \hyperpage{20}
+  \item {county}
+    \subitem {zip}, \hyperpage{16}
+
+  \indexspace
+
+  \item {delim}
+    \subitem {buffer}, \hyperpage{8}
+
+  \indexspace
+
+  \item {getBuffer}
+    \subitem {buffer}, \hyperpage{6}
+  \item {getCity}
+    \subitem {zip}, \hyperpage{12}
+  \item {getCounty}
+    \subitem {zip}, \hyperpage{12}
+  \item {getLat}
+    \subitem {zip}, \hyperpage{12}
+  \item {getLon}
+    \subitem {zip}, \hyperpage{12}
+  \item {getNum}
+    \subitem {zip}, \hyperpage{13}
+  \item {getStateCode}
+    \subitem {zip}, \hyperpage{13}
+
+  \indexspace
+
+  \item {index}
+    \subitem {buffer}, \hyperpage{8}
+
+  \indexspace
+
+  \item {lat}
+    \subitem {zip}, \hyperpage{16}
+  \item {lon}
+    \subitem {zip}, \hyperpage{16}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{20}
+  \item {main.cpp}, \hyperpage{19}
+    \subitem {cleanup}, \hyperpage{20}
+    \subitem {main}, \hyperpage{20}
+    \subitem {mostEast}, \hyperpage{21}
+    \subitem {mostNorth}, \hyperpage{22}
+    \subitem {mostSouth}, \hyperpage{22}
+    \subitem {mostWest}, \hyperpage{23}
+    \subitem {numStates}, \hyperpage{26}
+    \subitem {printTable}, \hyperpage{23}
+    \subitem {readIn}, \hyperpage{24}
+    \subitem {stateChooser}, \hyperpage{26}
+  \item {maxsize}
+    \subitem {buffer}, \hyperpage{8}
+  \item {mostEast}
+    \subitem {main.cpp}, \hyperpage{21}
+  \item {mostNorth}
+    \subitem {main.cpp}, \hyperpage{22}
+  \item {mostSouth}
+    \subitem {main.cpp}, \hyperpage{22}
+  \item {mostWest}
+    \subitem {main.cpp}, \hyperpage{23}
+
+  \indexspace
+
+  \item {num}
+    \subitem {zip}, \hyperpage{16}
+  \item {numStates}
+    \subitem {main.cpp}, \hyperpage{26}
+
+  \indexspace
+
+  \item {printTable}
+    \subitem {main.cpp}, \hyperpage{23}
+
+  \indexspace
+
+  \item {read}
+    \subitem {buffer}, \hyperpage{7}
+  \item {readIn}
+    \subitem {main.cpp}, \hyperpage{24}
+
+  \indexspace
+
+  \item {setCity}
+    \subitem {zip}, \hyperpage{13}
+  \item {setCounty}
+    \subitem {zip}, \hyperpage{14}
+  \item {setLat}
+    \subitem {zip}, \hyperpage{14}
+  \item {setLon}
+    \subitem {zip}, \hyperpage{14}
+  \item {setNum}
+    \subitem {zip}, \hyperpage{15}
+  \item {setStateCode}
+    \subitem {zip}, \hyperpage{15}
+  \item {size}
+    \subitem {buffer}, \hyperpage{8}
+  \item {stateChooser}
+    \subitem {main.cpp}, \hyperpage{26}
+  \item {stateCode}
+    \subitem {zip}, \hyperpage{16}
+
+  \indexspace
+
+  \item {unpack}
+    \subitem {buffer}, \hyperpage{7}
+
+  \indexspace
+
+  \item {zip}, \hyperpage{9}
+    \subitem {city}, \hyperpage{16}
+    \subitem {county}, \hyperpage{16}
+    \subitem {getCity}, \hyperpage{12}
+    \subitem {getCounty}, \hyperpage{12}
+    \subitem {getLat}, \hyperpage{12}
+    \subitem {getLon}, \hyperpage{12}
+    \subitem {getNum}, \hyperpage{13}
+    \subitem {getStateCode}, \hyperpage{13}
+    \subitem {lat}, \hyperpage{16}
+    \subitem {lon}, \hyperpage{16}
+    \subitem {num}, \hyperpage{16}
+    \subitem {setCity}, \hyperpage{13}
+    \subitem {setCounty}, \hyperpage{14}
+    \subitem {setLat}, \hyperpage{14}
+    \subitem {setLon}, \hyperpage{14}
+    \subitem {setNum}, \hyperpage{15}
+    \subitem {setStateCode}, \hyperpage{15}
+    \subitem {stateCode}, \hyperpage{16}
+    \subitem {zip}, \hyperpage{10, 11}
+  \item {zip.cpp}, \hyperpage{27}
+  \item {zip.h}, \hyperpage{27}
+
+\end{theindex}

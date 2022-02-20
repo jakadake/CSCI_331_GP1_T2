@@ -1,0 +1,325 @@
+\hypertarget{classzip}{}\doxysection{zip Class Reference}
+\label{classzip}\index{zip@{zip}}
+
+
+class to store each zip code as an object  
+
+
+
+
+{\ttfamily \#include $<$zip.\+h$>$}
+
+
+
+Collaboration diagram for zip\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classzip__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classzip_a87587784d910d9c64376ff1584533ff6}{zip}} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classzip_a2f2e4aa2cd9029a0127e6e1edc71dc2b}{zip}} (int new\+Num, string new\+City, string new\+State\+Code, string new\+County, float new\+Lat, float new\+Lon)
+\begin{DoxyCompactList}\small\item\em specified constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classzip_ab3fd4540487ae92befc0a8ffcb8f1876}{zip}} (\mbox{\hyperlink{classzip}{zip}} $\ast$old\+Zip)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classzip_a92b4acfb7f6d49a0855defe16e7b01b6}{set\+Num}} (int new\+Num)
+\begin{DoxyCompactList}\small\item\em Inline setters and getters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classzip_ab353f2802b70bc9b325031ad7ecdbe34}{get\+Num}} ()
+\item 
+void \mbox{\hyperlink{classzip_a05b404eb3806a908df09bd99a0f69885}{set\+City}} (string new\+City)
+\item 
+string \mbox{\hyperlink{classzip_a12727e886d98eec69c38c2de66d044a0}{get\+City}} ()
+\item 
+void \mbox{\hyperlink{classzip_a6eefface0793f748bf6ed62464d639c1}{set\+State\+Code}} (string new\+State\+Code)
+\item 
+string \mbox{\hyperlink{classzip_af56b3307111187dbfc79aaf00ab554c4}{get\+State\+Code}} ()
+\item 
+void \mbox{\hyperlink{classzip_a9fd02cc3a3ad94d93960ecc004d6a7a6}{set\+County}} (string new\+County)
+\item 
+string \mbox{\hyperlink{classzip_aebe73048171df6f1d2bd53f71532318f}{get\+County}} ()
+\item 
+void \mbox{\hyperlink{classzip_a8fb37ae2f5ef2bdbf821c9621f7d3b98}{set\+Lat}} (float new\+Lat)
+\item 
+float \mbox{\hyperlink{classzip_ac0be157a9a7c1ab70751dd1b827a417d}{get\+Lat}} ()
+\item 
+void \mbox{\hyperlink{classzip_a6cb31a4da7c97ba8cd795fedb68d564c}{set\+Lon}} (float new\+Lon)
+\item 
+float \mbox{\hyperlink{classzip_a04b92d514ba880a99c8bfb3e88217543}{get\+Lon}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classzip_a54ddc3334261862afef4e2950048dbff}{num}}
+\item 
+float \mbox{\hyperlink{classzip_afb9de421849110e3c46b689c5be6327a}{lat}}
+\item 
+float \mbox{\hyperlink{classzip_a40cc7a5a35f638635e97b15dfa1be417}{lon}}
+\item 
+string \mbox{\hyperlink{classzip_a2ceec4a20517902eac05fe371e712459}{state\+Code}}
+\item 
+string \mbox{\hyperlink{classzip_ac06af0f9acef19b7ab1ab605b52602df}{city}}
+\item 
+string \mbox{\hyperlink{classzip_a2d31ab1c810101ee05fcc6f3a2842708}{county}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class to store each zip code as an object 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classzip_a87587784d910d9c64376ff1584533ff6}\label{classzip_a87587784d910d9c64376ff1584533ff6}} 
+\index{zip@{zip}!zip@{zip}}
+\index{zip@{zip}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{zip()}{zip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily zip\+::zip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default constructor 
+
+\begin{DoxyPostcond}{Postcondition}
+initializes zip object to be empty 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classzip_a2f2e4aa2cd9029a0127e6e1edc71dc2b}\label{classzip_a2f2e4aa2cd9029a0127e6e1edc71dc2b}} 
+\index{zip@{zip}!zip@{zip}}
+\index{zip@{zip}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{zip()}{zip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily zip\+::zip (\begin{DoxyParamCaption}\item[{int}]{new\+Num,  }\item[{string}]{new\+City,  }\item[{string}]{new\+State\+Code,  }\item[{string}]{new\+County,  }\item[{float}]{new\+Lat,  }\item[{float}]{new\+Lon }\end{DoxyParamCaption})}
+
+
+
+specified constructor 
+
+\begin{DoxyPrecond}{Precondition}
+Takes in the zipcode, city of zipcode, 2 character string statecode, string for the county, floating point of the latitude, and floating point of the longitude. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classzip_ab3fd4540487ae92befc0a8ffcb8f1876}\label{classzip_ab3fd4540487ae92befc0a8ffcb8f1876}} 
+\index{zip@{zip}!zip@{zip}}
+\index{zip@{zip}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{zip()}{zip()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily zip\+::zip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzip}{zip}} $\ast$}]{old\+Zip }\end{DoxyParamCaption})}
+
+
+
+copy constructor 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classzip_ab3fd4540487ae92befc0a8ffcb8f1876_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classzip_a12727e886d98eec69c38c2de66d044a0}\label{classzip_a12727e886d98eec69c38c2de66d044a0}} 
+\index{zip@{zip}!getCity@{getCity}}
+\index{getCity@{getCity}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{getCity()}{getCity()}}
+{\footnotesize\ttfamily string zip\+::get\+City (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classzip_a12727e886d98eec69c38c2de66d044a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_aebe73048171df6f1d2bd53f71532318f}\label{classzip_aebe73048171df6f1d2bd53f71532318f}} 
+\index{zip@{zip}!getCounty@{getCounty}}
+\index{getCounty@{getCounty}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{getCounty()}{getCounty()}}
+{\footnotesize\ttfamily string zip\+::get\+County (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classzip_aebe73048171df6f1d2bd53f71532318f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_ac0be157a9a7c1ab70751dd1b827a417d}\label{classzip_ac0be157a9a7c1ab70751dd1b827a417d}} 
+\index{zip@{zip}!getLat@{getLat}}
+\index{getLat@{getLat}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{getLat()}{getLat()}}
+{\footnotesize\ttfamily float zip\+::get\+Lat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classzip_ac0be157a9a7c1ab70751dd1b827a417d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_a04b92d514ba880a99c8bfb3e88217543}\label{classzip_a04b92d514ba880a99c8bfb3e88217543}} 
+\index{zip@{zip}!getLon@{getLon}}
+\index{getLon@{getLon}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{getLon()}{getLon()}}
+{\footnotesize\ttfamily float zip\+::get\+Lon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classzip_a04b92d514ba880a99c8bfb3e88217543_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_ab353f2802b70bc9b325031ad7ecdbe34}\label{classzip_ab353f2802b70bc9b325031ad7ecdbe34}} 
+\index{zip@{zip}!getNum@{getNum}}
+\index{getNum@{getNum}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{getNum()}{getNum()}}
+{\footnotesize\ttfamily int zip\+::get\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classzip_ab353f2802b70bc9b325031ad7ecdbe34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_af56b3307111187dbfc79aaf00ab554c4}\label{classzip_af56b3307111187dbfc79aaf00ab554c4}} 
+\index{zip@{zip}!getStateCode@{getStateCode}}
+\index{getStateCode@{getStateCode}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{getStateCode()}{getStateCode()}}
+{\footnotesize\ttfamily string zip\+::get\+State\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classzip_af56b3307111187dbfc79aaf00ab554c4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_a05b404eb3806a908df09bd99a0f69885}\label{classzip_a05b404eb3806a908df09bd99a0f69885}} 
+\index{zip@{zip}!setCity@{setCity}}
+\index{setCity@{setCity}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{setCity()}{setCity()}}
+{\footnotesize\ttfamily void zip\+::set\+City (\begin{DoxyParamCaption}\item[{string}]{new\+City }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{classzip_a05b404eb3806a908df09bd99a0f69885_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_a9fd02cc3a3ad94d93960ecc004d6a7a6}\label{classzip_a9fd02cc3a3ad94d93960ecc004d6a7a6}} 
+\index{zip@{zip}!setCounty@{setCounty}}
+\index{setCounty@{setCounty}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{setCounty()}{setCounty()}}
+{\footnotesize\ttfamily void zip\+::set\+County (\begin{DoxyParamCaption}\item[{string}]{new\+County }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{classzip_a9fd02cc3a3ad94d93960ecc004d6a7a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_a8fb37ae2f5ef2bdbf821c9621f7d3b98}\label{classzip_a8fb37ae2f5ef2bdbf821c9621f7d3b98}} 
+\index{zip@{zip}!setLat@{setLat}}
+\index{setLat@{setLat}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{setLat()}{setLat()}}
+{\footnotesize\ttfamily void zip\+::set\+Lat (\begin{DoxyParamCaption}\item[{float}]{new\+Lat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classzip_a8fb37ae2f5ef2bdbf821c9621f7d3b98_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_a6cb31a4da7c97ba8cd795fedb68d564c}\label{classzip_a6cb31a4da7c97ba8cd795fedb68d564c}} 
+\index{zip@{zip}!setLon@{setLon}}
+\index{setLon@{setLon}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{setLon()}{setLon()}}
+{\footnotesize\ttfamily void zip\+::set\+Lon (\begin{DoxyParamCaption}\item[{float}]{new\+Lon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classzip_a6cb31a4da7c97ba8cd795fedb68d564c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_a92b4acfb7f6d49a0855defe16e7b01b6}\label{classzip_a92b4acfb7f6d49a0855defe16e7b01b6}} 
+\index{zip@{zip}!setNum@{setNum}}
+\index{setNum@{setNum}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{setNum()}{setNum()}}
+{\footnotesize\ttfamily void zip\+::set\+Num (\begin{DoxyParamCaption}\item[{int}]{new\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inline setters and getters. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classzip_a92b4acfb7f6d49a0855defe16e7b01b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classzip_a6eefface0793f748bf6ed62464d639c1}\label{classzip_a6eefface0793f748bf6ed62464d639c1}} 
+\index{zip@{zip}!setStateCode@{setStateCode}}
+\index{setStateCode@{setStateCode}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{setStateCode()}{setStateCode()}}
+{\footnotesize\ttfamily void zip\+::set\+State\+Code (\begin{DoxyParamCaption}\item[{string}]{new\+State\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classzip_a6eefface0793f748bf6ed62464d639c1_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classzip_ac06af0f9acef19b7ab1ab605b52602df}\label{classzip_ac06af0f9acef19b7ab1ab605b52602df}} 
+\index{zip@{zip}!city@{city}}
+\index{city@{city}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{city}{city}}
+{\footnotesize\ttfamily string zip\+::city\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classzip_a2d31ab1c810101ee05fcc6f3a2842708}\label{classzip_a2d31ab1c810101ee05fcc6f3a2842708}} 
+\index{zip@{zip}!county@{county}}
+\index{county@{county}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{county}{county}}
+{\footnotesize\ttfamily string zip\+::county\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classzip_afb9de421849110e3c46b689c5be6327a}\label{classzip_afb9de421849110e3c46b689c5be6327a}} 
+\index{zip@{zip}!lat@{lat}}
+\index{lat@{lat}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{lat}{lat}}
+{\footnotesize\ttfamily float zip\+::lat\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classzip_a40cc7a5a35f638635e97b15dfa1be417}\label{classzip_a40cc7a5a35f638635e97b15dfa1be417}} 
+\index{zip@{zip}!lon@{lon}}
+\index{lon@{lon}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{lon}{lon}}
+{\footnotesize\ttfamily float zip\+::lon\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classzip_a54ddc3334261862afef4e2950048dbff}\label{classzip_a54ddc3334261862afef4e2950048dbff}} 
+\index{zip@{zip}!num@{num}}
+\index{num@{num}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily int zip\+::num\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classzip_a2ceec4a20517902eac05fe371e712459}\label{classzip_a2ceec4a20517902eac05fe371e712459}} 
+\index{zip@{zip}!stateCode@{stateCode}}
+\index{stateCode@{stateCode}!zip@{zip}}
+\doxysubsubsection{\texorpdfstring{stateCode}{stateCode}}
+{\footnotesize\ttfamily string zip\+::state\+Code\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{zip_8h}{zip.\+h}}\item 
+\mbox{\hyperlink{zip_8cpp}{zip.\+cpp}}\end{DoxyCompactItemize}

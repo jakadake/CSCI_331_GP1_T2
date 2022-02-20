@@ -1,0 +1,55 @@
+\hypertarget{zip_8h_source}{}\doxysection{zip.\+h}
+\mbox{\hyperlink{zip_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef ZIP}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define ZIP}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{classzip}{zip}} \{}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{25     \mbox{\hyperlink{classzip_a87587784d910d9c64376ff1584533ff6}{zip}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{32     \mbox{\hyperlink{classzip_a87587784d910d9c64376ff1584533ff6}{zip}}(\textcolor{keywordtype}{int} newNum, \textcolor{keywordtype}{string} newCity, \textcolor{keywordtype}{string} newStateCode, \textcolor{keywordtype}{string} newCounty, \textcolor{keywordtype}{float} newLat, \textcolor{keywordtype}{float} newLon);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{37     \mbox{\hyperlink{classzip_a87587784d910d9c64376ff1584533ff6}{zip}}(\mbox{\hyperlink{classzip}{zip}}* oldZip);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{classzip_a92b4acfb7f6d49a0855defe16e7b01b6}{setNum}}(\textcolor{keywordtype}{int} newNum) \{ \mbox{\hyperlink{classzip_a54ddc3334261862afef4e2950048dbff}{num}} = newNum; \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{int} \mbox{\hyperlink{classzip_ab353f2802b70bc9b325031ad7ecdbe34}{getNum}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classzip_a54ddc3334261862afef4e2950048dbff}{num}}; \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classzip_a05b404eb3806a908df09bd99a0f69885}{setCity}}(\textcolor{keywordtype}{string} newCity) \{ \mbox{\hyperlink{classzip_ac06af0f9acef19b7ab1ab605b52602df}{city}} = newCity; \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{string} \mbox{\hyperlink{classzip_a12727e886d98eec69c38c2de66d044a0}{getCity}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classzip_ac06af0f9acef19b7ab1ab605b52602df}{city}}; \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{classzip_a6eefface0793f748bf6ed62464d639c1}{setStateCode}}(\textcolor{keywordtype}{string} newStateCode) \{ \mbox{\hyperlink{classzip_a2ceec4a20517902eac05fe371e712459}{stateCode}} = newStateCode; \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{string} \mbox{\hyperlink{classzip_af56b3307111187dbfc79aaf00ab554c4}{getStateCode}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classzip_a2ceec4a20517902eac05fe371e712459}{stateCode}}; \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{classzip_a9fd02cc3a3ad94d93960ecc004d6a7a6}{setCounty}}(\textcolor{keywordtype}{string} newCounty) \{ \mbox{\hyperlink{classzip_a2d31ab1c810101ee05fcc6f3a2842708}{county}} = newCounty; \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{string} \mbox{\hyperlink{classzip_aebe73048171df6f1d2bd53f71532318f}{getCounty}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classzip_a2d31ab1c810101ee05fcc6f3a2842708}{county}}; \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{classzip_a8fb37ae2f5ef2bdbf821c9621f7d3b98}{setLat}}(\textcolor{keywordtype}{float} newLat) \{ \mbox{\hyperlink{classzip_afb9de421849110e3c46b689c5be6327a}{lat}} = newLat; \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{float} \mbox{\hyperlink{classzip_ac0be157a9a7c1ab70751dd1b827a417d}{getLat}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classzip_afb9de421849110e3c46b689c5be6327a}{lat}}; \};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{classzip_a6cb31a4da7c97ba8cd795fedb68d564c}{setLon}}(\textcolor{keywordtype}{float} newLon) \{ \mbox{\hyperlink{classzip_a40cc7a5a35f638635e97b15dfa1be417}{lon}} = newLon; \};}
+\DoxyCodeLine{64     }
+\DoxyCodeLine{65     \textcolor{keywordtype}{float} \mbox{\hyperlink{classzip_a04b92d514ba880a99c8bfb3e88217543}{getLon}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classzip_a40cc7a5a35f638635e97b15dfa1be417}{lon}}; \};}
+\DoxyCodeLine{66  }
+\DoxyCodeLine{67 \textcolor{keyword}{private}:}
+\DoxyCodeLine{68     \textcolor{keywordtype}{int} \mbox{\hyperlink{classzip_a54ddc3334261862afef4e2950048dbff}{num}};}
+\DoxyCodeLine{69     \textcolor{keywordtype}{float} \mbox{\hyperlink{classzip_afb9de421849110e3c46b689c5be6327a}{lat}};}
+\DoxyCodeLine{70     \textcolor{keywordtype}{float} \mbox{\hyperlink{classzip_a40cc7a5a35f638635e97b15dfa1be417}{lon}};}
+\DoxyCodeLine{71     \textcolor{keywordtype}{string} \mbox{\hyperlink{classzip_a2ceec4a20517902eac05fe371e712459}{stateCode}};}
+\DoxyCodeLine{72     \textcolor{keywordtype}{string} \mbox{\hyperlink{classzip_ac06af0f9acef19b7ab1ab605b52602df}{city}};}
+\DoxyCodeLine{73     \textcolor{keywordtype}{string} \mbox{\hyperlink{classzip_a2d31ab1c810101ee05fcc6f3a2842708}{county}};}
+\DoxyCodeLine{74 \};}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,40 @@
+\hypertarget{buffer_8h_source}{}\doxysection{buffer.\+h}
+\mbox{\hyperlink{buffer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef BUFFER\_h}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define BUFFER\_h}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{classbuffer}{buffer}} \{}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{26     \mbox{\hyperlink{classbuffer_a5e4b67f8834ec79f467a1e11bdebe042}{buffer}}();}
+\DoxyCodeLine{27     \mbox{\hyperlink{classbuffer_a5e4b67f8834ec79f467a1e11bdebe042}{buffer}}(\textcolor{keywordtype}{char}, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbuffer_a9268288e8e5634e3ab2ca9f4689bdbca}{read}}(ifstream\& inFile);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classbuffer_a352066bf8b1c9a22405fdcb798511e89}{unpack}}(\textcolor{keywordtype}{string} \& field);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{string} \mbox{\hyperlink{classbuffer_aa45dc2ea1f3b5de8ad2ec8e4ca3a96de}{getBuffer}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classbuffer_a95cf6afbc3dc1635890874bea253cf74}{buf}}; \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keyword}{private}:}
+\DoxyCodeLine{53     \textcolor{keywordtype}{char} \mbox{\hyperlink{classbuffer_a0259545840846783421f222770e94e2f}{delim}};}
+\DoxyCodeLine{54     \textcolor{keywordtype}{int} \mbox{\hyperlink{classbuffer_af3f397315f9d1257c0b271d6692c9e14}{size}};}
+\DoxyCodeLine{55     \textcolor{keywordtype}{int} \mbox{\hyperlink{classbuffer_a4bee5080d2abb0490f20bb215dcbe298}{maxsize}};}
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} \mbox{\hyperlink{classbuffer_a4018f851817a66cb8aaf9fd5761244c3}{index}};}
+\DoxyCodeLine{57     \textcolor{keywordtype}{string} \mbox{\hyperlink{classbuffer_a95cf6afbc3dc1635890874bea253cf74}{buf}};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
